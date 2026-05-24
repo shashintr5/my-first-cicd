@@ -1,0 +1,15 @@
+name: My First GitHub Action
+
+on: [push]  # This triggers the pipeline every time you save a change
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run a one-line script
+      run: echo "Hello, the CI/CD pipeline is working!"
+
+    - name: Run a multi-line script
+      run: |
+        echo "Step 1: Code checked."
+        echo "Step 2: Tests simulated successfully."
